@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Squash</string>
+    <string name="home_header">Home</string>
+    <string name="visitor_header">Visitor</string>
+    <string name="_0">0</string>
+    <string name="score_button_home_text">Score</string>
+    <string name="score_button_visitor_text">Score</string>
+    <string name="game_header">Game</string>
+    <string name="game_button_text">Game</string>
+    <string name="score_reset_button_text">Score reset</string>
+    <string name="game_reset_button_text">Game reset</string>
+    <string name="home_radio_button_text">Home</string>
+    <string name="visitor_radio_button_text">Visitor</string>
+    <string name="service_header">Service</string>
+
+</resources>
