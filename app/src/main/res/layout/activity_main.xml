@@ -203,6 +203,7 @@
                 android:checked="true"
                 android:fontFamily="@font/cabin_medium"
                 android:text="@string/home_radio_button_text"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="52dp"
                 tools:layout_editor_absoluteY="442dp" />
 
@@ -213,6 +214,7 @@
                 android:layout_weight="1"
                 android:fontFamily="@font/cabin_medium"
                 android:text="@string/visitor_radio_button_text"
+                android:textSize="18sp"
                 tools:layout_editor_absoluteX="229dp"
                 tools:layout_editor_absoluteY="453dp" />
         </RadioGroup>

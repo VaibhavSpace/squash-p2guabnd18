@@ -9,9 +9,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
-    int scoreHome = 0;
-    int scoreVisitor = 0;
-    int scoreGames = 0;
+    int scoreHome, scoreVisitor,scoreGames; // Variables to track scores fro Home, Visitor and Games
+    TextView scoreHomeView, scoreVisitorView, scoreGamesView; //TextView variable to display scores fro Home, Visitor and Games
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,10 +20,14 @@ public class MainActivity extends AppCompatActivity {
         displayForHome(scoreHome);
         displayForVisitor(scoreVisitor);
         displayForGames(scoreGames);
+
+        scoreHomeView = findViewById(R.id.textView_score_home);
+        scoreVisitorView = findViewById(R.id.textView_score_visitor);
+        scoreGamesView = findViewById(R.id.textView_score_game);
     }
 
     /**
-     * Retains scores values in the case of orientation.
+     * Retains scores values in the case of screen rotation.
      */
     @Override
     public void onSaveInstanceState(Bundle savedInstanceState) {
@@ -32,7 +35,6 @@ public class MainActivity extends AppCompatActivity {
         savedInstanceState.putInt("scoreHomeKey", scoreHome);
         savedInstanceState.putInt("scoreVisitorKey", scoreVisitor);
         savedInstanceState.putInt("scoreGameKey", scoreGames);
-
     }
 
     @Override
@@ -42,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         scoreHome = savedInstanceState.getInt("scoreHomeKey");
         scoreVisitor = savedInstanceState.getInt("scoreVisitorKey");
         scoreGames = savedInstanceState.getInt("scoreGameKey");
-
 
         TextView scoreHomeTextView = findViewById(R.id.textView_score_home);
         scoreHomeTextView.setText(String.valueOf(scoreHome));
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Home.
      */
     public void displayForHome(int score) {
-        TextView scoreView = findViewById(R.id.textView_score_home);
-        scoreView.setText(String.valueOf(score));
+        scoreHomeView = findViewById(R.id.textView_score_home);
+        scoreHomeView.setText(String.valueOf(score));
     }
 
     /**
@@ -74,8 +75,8 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Visitor.
      */
     public void displayForVisitor(int score) {
-        TextView scoreView = findViewById(R.id.textView_score_visitor);
-        scoreView.setText(String.valueOf(score));
+        scoreVisitorView = findViewById(R.id.textView_score_visitor);
+        scoreVisitorView.setText(String.valueOf(score));
     }
 
     /**
@@ -90,8 +91,8 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Games.
      */
     public void displayForGames(int score) {
-        TextView scoreView = findViewById(R.id.textView_score_game);
-        scoreView.setText(String.valueOf(score));
+        scoreGamesView = findViewById(R.id.textView_score_game);
+        scoreGamesView.setText(String.valueOf(score));
     }
 
     /**
